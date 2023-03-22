@@ -6,11 +6,16 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import org.hibernate.annotations.TenantId;
 @Entity
 @Table(name = "greeting")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Greeting {
 
 	 
@@ -21,7 +26,7 @@ public class Greeting {
 	    @Column(name = "name")
 	    private String name;
 	    
-	    @Column(name = "tenant_id")
+	    @TenantId
 	    private String tenantId;
 	 
 	    @Column(name = "message")

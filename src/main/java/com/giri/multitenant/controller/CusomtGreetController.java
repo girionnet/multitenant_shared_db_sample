@@ -31,7 +31,7 @@ public class CusomtGreetController {
     	//ArrayList al = new ArrayList(); 
     	//al.add("Giri"); 
     	System.out.println("currentTenant :"+ currentTenant);
-    	return greetingRepository.findByName(currentTenant, name);
+    	return greetingRepository.findByName(name);
     	
     	//return al; 
     }
